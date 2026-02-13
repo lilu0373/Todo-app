@@ -1,0 +1,154 @@
+.container {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.monthLabel {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  gap: 6px;
+}
+
+.navBtn {
+  padding: 6px 14px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: 20px;
+  font-size: 13px;
+  color: var(--color-text-primary);
+  transition: all 0.15s;
+}
+
+.navBtn:hover {
+  background: var(--color-bg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.dayHeader {
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  background: var(--color-bg);
+}
+
+.dayHeaderSun {
+  color: var(--color-danger);
+}
+
+.dayHeaderSat {
+  color: #4a90e2;
+}
+
+.day {
+  min-height: 90px;
+  padding: 6px;
+  border: 1px solid var(--color-border);
+  border-top: none;
+  border-left: none;
+  cursor: pointer;
+  transition: background 0.15s;
+  position: relative;
+}
+
+.day:hover {
+  background: #f8faf8;
+}
+
+.dayOtherMonth {
+  background: #fafafa;
+}
+
+.dayOtherMonth .dayNumber {
+  color: var(--color-text-muted);
+}
+
+.dayNumber {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.dayNumberToday {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 600;
+}
+
+.dayNumberSun {
+  color: var(--color-danger);
+}
+
+.dayNumberSat {
+  color: #4a90e2;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.todoChip {
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 3px;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.todoChipCompleted {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+
+.moreLabel {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  padding: 1px 6px;
+}
+
+@media (max-width: 768px) {
+  .day {
+    min-height: 60px;
+    padding: 4px;
+  }
+
+  .dayNumber {
+    font-size: 12px;
+  }
+
+  .todoChip {
+    font-size: 10px;
+    padding: 0 4px;
+  }
+}

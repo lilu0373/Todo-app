@@ -1,0 +1,100 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.input,
+.textarea,
+.select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--color-text-primary);
+  transition: border-color 0.15s;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row > * {
+  flex: 1;
+}
+
+.checkRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.btnPrimary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btnPrimary:hover {
+  background: var(--color-primary-dark);
+}
+
+.btnSecondary {
+  background: var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.btnSecondary:hover {
+  background: #d5d5d5;
+}
+
+.btnDanger {
+  background: var(--color-danger);
+  color: #fff;
+  margin-right: auto;
+}
+
+.btnDanger:hover {
+  background: var(--color-danger-hover);
+}
+
+.categoryOption {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

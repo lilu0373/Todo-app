@@ -1,0 +1,16 @@
+.layout {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  min-height: 100vh;
+}
+
+.main {
+  padding: 24px;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
